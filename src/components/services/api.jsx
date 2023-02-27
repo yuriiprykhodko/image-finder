@@ -1,6 +1,7 @@
 
+const KEY = '21893173-2e6903a6fb362f8aa14208207';
 
- function fetchImages(query,page,KEY) {
+ function fetchHits(query,page) {
   return  fetch(`https://pixabay.com/api/?q=${query}&page=${page}&key=${KEY}&image_type=photo&orientation=horizontal&per_page=12`).then(response => {
         
                 if (!response.ok) {
@@ -11,5 +12,5 @@
 }
 
 export const api = {
-  fetchImages,
+  fetchHits,
 };
